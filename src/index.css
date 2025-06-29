@@ -1,0 +1,276 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+@layer base {
+  body {
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    font-weight: 700;
+  }
+  
+  p {
+    line-height: 1.7;
+  }
+}
+
+@layer components {
+  /* Consistent spacing system */
+  .section-padding {
+    @apply py-20;
+  }
+  
+  .container-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+  
+  .max-container {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  .content-container {
+    @apply max-w-6xl mx-auto;
+  }
+  
+  .text-container {
+    @apply max-w-4xl mx-auto;
+  }
+  
+  /* Consistent button styles */
+  .btn-primary {
+    @apply bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl;
+  }
+  
+  .btn-secondary {
+    @apply bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-blue-600 transition-all duration-300 hover:scale-105;
+  }
+  
+  .btn-outline {
+    @apply bg-white text-blue-600 border-2 border-blue-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-600 hover:text-white transition-all duration-300 hover:scale-105 shadow-lg;
+  }
+  
+  /* Consistent card styles */
+  .card {
+    @apply bg-white rounded-2xl shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-2xl;
+  }
+  
+  .card-hover {
+    @apply hover:border-blue-200 hover:scale-105;
+  }
+  
+  /* Consistent form styles */
+  .form-input {
+    @apply w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 font-medium;
+  }
+  
+  .form-label {
+    @apply block text-sm font-bold text-gray-700 mb-2;
+  }
+  
+  /* Consistent icon containers */
+  .icon-container {
+    @apply bg-gradient-to-r from-blue-500 to-purple-500 p-3 rounded-xl shadow-lg;
+  }
+  
+  .icon-container-sm {
+    @apply bg-gradient-to-r from-blue-500 to-purple-500 p-2 rounded-lg;
+  }
+  
+  /* Consistent grid layouts */
+  .grid-responsive {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+  }
+  
+  .grid-2-col {
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-16 items-center;
+  }
+  
+  /* Consistent text styles */
+  .heading-xl {
+    @apply text-5xl md:text-6xl font-bold leading-tight;
+  }
+  
+  .heading-lg {
+    @apply text-4xl md:text-5xl font-bold leading-tight;
+  }
+  
+  .heading-md {
+    @apply text-3xl md:text-4xl font-bold;
+  }
+  
+  .heading-sm {
+    @apply text-2xl md:text-3xl font-bold;
+  }
+  
+  .text-lead {
+    @apply text-xl md:text-2xl leading-relaxed font-light;
+  }
+  
+  .text-body {
+    @apply text-lg leading-relaxed font-medium;
+  }
+  
+  /* Consistent spacing utilities */
+  .space-section {
+    @apply space-y-8;
+  }
+  
+  .space-content {
+    @apply space-y-6;
+  }
+  
+  .space-items {
+    @apply space-y-4;
+  }
+  
+  .space-tight {
+    @apply space-y-2;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .backdrop-blur-glass {
+    backdrop-filter: blur(16px);
+    background: rgba(255, 255, 255, 0.95);
+  }
+  
+  .gradient-border {
+    background: linear-gradient(45deg, #3B82F6, #8B5CF6, #EC4899);
+    padding: 2px;
+    border-radius: 12px;
+  }
+  
+  .gradient-border-inner {
+    background: white;
+    border-radius: 10px;
+  }
+  
+  /* Consistent alignment utilities */
+  .center-content {
+    @apply flex items-center justify-center;
+  }
+  
+  .center-vertical {
+    @apply flex items-center;
+  }
+  
+  .center-horizontal {
+    @apply flex justify-center;
+  }
+  
+  /* Consistent background patterns */
+  .bg-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+  }
+  
+  .bg-dots {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+}
+
+/* Animation utilities */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Article content styling */
+.article-content h2 {
+  @apply text-3xl font-bold text-gray-800 mb-6 mt-12;
+}
+
+.article-content h3 {
+  @apply text-2xl font-bold text-gray-800 mb-4 mt-8;
+}
+
+.article-content h4 {
+  @apply text-xl font-semibold text-gray-800 mb-3 mt-6;
+}
+
+.article-content p {
+  @apply text-lg text-gray-700 leading-relaxed mb-6;
+}
+
+.article-content ul {
+  @apply list-disc list-inside text-gray-700 mb-6 space-y-2;
+}
+
+.article-content li {
+  @apply text-lg leading-relaxed;
+}
+
+.article-content strong {
+  @apply font-bold text-gray-800;
+}
+
+/* Responsive design consistency */
+@media (max-width: 768px) {
+  .section-padding {
+    @apply py-12;
+  }
+  
+  .heading-xl {
+    @apply text-4xl;
+  }
+  
+  .heading-lg {
+    @apply text-3xl;
+  }
+  
+  .text-lead {
+    @apply text-lg;
+  }
+  
+  .btn-primary, .btn-secondary, .btn-outline {
+    @apply px-6 py-3 text-base;
+  }
+}
+
+/* Focus states for accessibility */
+.form-input:focus,
+.btn-primary:focus,
+.btn-secondary:focus,
+.btn-outline:focus {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+}
+
+/* Consistent hover states */
+.hover-lift {
+  @apply transition-all duration-300 hover:scale-105 hover:shadow-xl;
+}
+
+.hover-glow {
+  @apply transition-all duration-300 hover:shadow-2xl;
+}
