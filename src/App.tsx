@@ -11,7 +11,7 @@ import BlogPost from './pages/BlogPost';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/locksmith-plus/">
       <div className="min-h-screen bg-gray-50">
         <Header />
         <main>
