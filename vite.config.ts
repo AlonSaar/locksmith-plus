@@ -4,7 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode, command }) => ({
-  base: (command === 'build' && process.env.GITHUB_PAGES === 'true') ? '/locksmith-plus/' : '/',
+  base: '/locksmith-plus/',
   server: {
     host: "::",
     port: 8080,
